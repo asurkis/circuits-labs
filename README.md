@@ -220,7 +220,7 @@ Test for x8 = 1 was successful!
 
 Замеры потребления ресурсов FPGA были сделаны в симуляторе Vivaldo.
 
-![](./power.png)
+![](./res.png)
 <!-- ![Вывод результатов
 тестирования[]{label="ris:image"}](https://i.imgur.com/qv8NBmJ.png) -->
 
