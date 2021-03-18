@@ -21,6 +21,26 @@ wire [15:0] mult_out;
 reg mult_reset;
 wire mult_busy;
 
+reg [8:0] sum_i1;
+reg [8:0] sum_i2;
+wire [8:0] sum_o;
+
+reg [8:0] sub_i1;
+reg [8:0] sub_i2;
+wire [8:0] sub_o;
+
+adder adder1(
+    .a(sum_i1),
+    .b(sum_i2),
+    .y(sum_o)
+);
+
+substractor sub1(
+    .a(sub_i1),
+    .b(sub_i2),
+    .y(sub_o)
+);
+
 mult mult_1(
 	.clk_i(clk_i),
 	.rst_i(mult_reset),
@@ -41,6 +61,11 @@ localparam STATE7 = 4'b0111;
 localparam STATE8 = 4'b1000;
 localparam STATE9 = 4'b1001;
 localparam STATE10 = 4'b1010;
+/* localparam STATE11 = 4'b1011;
+localparam STATE12 = 4'b1100;
+localparam STATE13 = 4'b1101;
+localparam STATE14 = 4'b1110;
+localparam STATE15 = 4'b1111; */
 
 assign busy_out = rst_i | |state;
 assign y_out = r;
@@ -86,9 +111,15 @@ always @(posedge clk_i) begin
 					mult_reset <= 0;
 					if (!mult_busy) begin
 						if (x < mult_out) begin
-							r <= r - m;
+							sub_i1 = r;
+							sub_i2 = m;
+							#10
+							r = sub_o;
 						end else if (x > mult_out) begin
-							r <= r + m;
+						    sum_i1 = r;
+						    sum_i2 = m;
+						    #10
+						    r = sum_o;
 						end else begin
 							m <= 0;
 						end
@@ -102,7 +133,10 @@ always @(posedge clk_i) begin
 				end
 			STATE5:
 				begin
-					x <= a + r;
+					sum_i1 = a;
+				    sum_i2 = r;
+					#10
+					x = sum_o;
 					m <= 64;
 					state <= STATE6;
 				end
@@ -132,7 +166,10 @@ always @(posedge clk_i) begin
 				end
 			STATE9:
 				begin
-					x <= x - t;
+					sub_i1 = x;
+					sub_i2 = t;
+					#10
+					r = sub_o;
 					r <= r | m;
 					state <= STATE10;
 				end
