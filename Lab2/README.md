@@ -56,10 +56,10 @@ floor sqrt (   3 + floor cbrt   3 ) = 2
 floor sqrt (   4 + floor cbrt   4 ) = 2
 floor sqrt (   5 + floor cbrt   5 ) = 2
 
-floor sqrt (   0 + floor cbrt   0 ) = 0
-floor sqrt (   1 + floor cbrt  15 ) = 0
-floor sqrt (   2 + floor cbrt  30 ) = 0
-floor sqrt (   3 + floor cbrt  45 ) = 0
+floor sqrt (   0 + floor cbrt    0 ) =   0
+floor sqrt (   1 + floor cbrt   15 ) =   2
+floor sqrt (   2 + floor cbrt   30 ) =   1
+floor sqrt (   3 + floor cbrt   45 ) =   3
 ```
 <!-- ![](https://i.imgur.com/bk1GtV9.png)
 ![](https://i.imgur.com/o8FIqbI.png) -->
