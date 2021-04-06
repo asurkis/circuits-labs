@@ -12,7 +12,7 @@ reg [7:0] a;
 reg [8:0] x;
 reg [15:0] t;
 reg [15:0] r;
-reg [7:0] m;
+reg [8:0] m;
 reg [3:0] state, state_next;
 reg [7:0] mult_i1;
 reg [7:0] mult_i2;
@@ -36,7 +36,7 @@ adder adder1(
     .y(sum_o)
 );
 
-substractor sub1(
+subtractor sub1(
     .a(sub_i1),
     .b(sub_i2),
     .y(sub_o)
@@ -160,7 +160,7 @@ always @(posedge clk_i) begin
             begin
                 sum_i1 <= a;
                 sum_i2 <= r;
-                m <= 64;
+                m <= 256;
             end
         STATE6:
          begin
@@ -182,3 +182,4 @@ always @(posedge clk_i) begin
 end
 
 endmodule
+
