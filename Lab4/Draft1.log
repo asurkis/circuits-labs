@@ -1,0 +1,22 @@
+Circuit: * Z:\hdd\homework\schematics\circuits-labs\Lab4\Draft1.asc
+
+Warning: Multiple definitions of model "aons66402" Type: Vdmos1
+Direct Newton iteration for .op point succeeded.
+
+Date: Wed Apr 21 21:17:01 2021
+Total elapsed time: 0.296 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 20242
+traniter = 20236
+tranpoints = 10094
+accept = 10082
+rejected = 12
+matrix size = 13
+fillins = 0
+solver = Normal
+Matrix Compiler1: 960 bytes object code size  0.3/0.2/[0.2]
+Matrix Compiler2: 1.32 KB object code size  0.2/0.2/[0.2]
+
