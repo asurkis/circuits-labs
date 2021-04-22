@@ -1,25 +1,44 @@
-Circuit: * C:\Users\asurk\Documents\circuits-labs\Lab4\Draft1.asc
+Circuit: * Z:\hdd\homework\schematics\circuits-labs\Lab4\Draft1.asc
 
 Warning: Multiple definitions of model "aons66402" Type: Vdmos1
-WARNING: Node NC_01 is floating.
+WARNING: Less than two connections to node X1.  This node is used by V_X1.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+Gmin = 1.89714e-008
+Gmin = 2.03704e-009
+Gmin = 2.18725e-010
+Gmin = 2.34854e-011
+Gmin = 2.52173e-012
+Gmin = 2.70769e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
 
-WARNING: Less than two connections to node NC_01.  This node is used by C1.
-Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 2e-008 to 2.00002e-008
 
-Date: Thu Apr 22 14:34:20 2021
-Total elapsed time: 0.903 seconds.
+Date: Thu Apr 22 16:36:18 2021
+Total elapsed time: 12.118 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 20262
-traniter = 20255
-tranpoints = 10088
-accept = 10077
-rejected = 11
-matrix size = 25
-fillins = 0
+totiter = 70093
+traniter = 69685
+tranpoints = 34420
+accept = 34367
+rejected = 54
+matrix size = 378
+fillins = 32
 solver = Normal
-Matrix Compiler1: 2.31 KB object code size  1.4/0.8/[0.5]
-Matrix Compiler2: off  [0.8]/1.0/1.1
+Thread vector: 194.6/128.2[8] 30.9/18.5[8] 9.6/5.7[8] 1.8/6.9[1]  2592/500
+Matrix Compiler1: 56.96 KB object code size  18.0/8.0/[4.5]
+Matrix Compiler2: 47.75 KB object code size  9.3/8.3/[2.9]
 
