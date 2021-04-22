@@ -1,0 +1,24 @@
+* C:\Users\asurk\Documents\circuits-labs\Lab4\Draft1.asc
+XX1 N001 N002 N004 N003 nand
+V1 N001 0 1
+V2 N002 0 PULSE(0 1 1n 10p 10p 2n 4n)
+V3 N004 0 PULSE(0 1 1n 10p 10p 4n 8n)
+R1 N003 0 100k
+C1 NC_01 0 100f
+
+* block symbol definitions
+.subckt nand V_POS IN_A IN_B OUT
+M1 V_POS IN_A OUT V_POS PMOS l=90n w=400n
+M2 V_POS IN_B OUT V_POS PMOS l=90n w=400n
+M3 OUT IN_A N001 N001 NMOS l=90n w=200n
+M4 N001 IN_B 0 0 NMOS l=90n w=200n
+.include 90nm_bulk.txt
+.ends nand
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\asurk\Documents\LTspiceXVII\lib\cmp\standard.mos
+.include 90nm_bulk.txt
+.tran 0 10n 0 1p
+.backanno
+.end

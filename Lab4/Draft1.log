@@ -1,22 +1,25 @@
-Circuit: * Z:\hdd\homework\schematics\circuits-labs\Lab4\Draft1.asc
+Circuit: * C:\Users\asurk\Documents\circuits-labs\Lab4\Draft1.asc
 
 Warning: Multiple definitions of model "aons66402" Type: Vdmos1
+WARNING: Node NC_01 is floating.
+
+WARNING: Less than two connections to node NC_01.  This node is used by C1.
 Direct Newton iteration for .op point succeeded.
 
-Date: Wed Apr 21 21:17:01 2021
-Total elapsed time: 0.296 seconds.
+Date: Thu Apr 22 14:34:20 2021
+Total elapsed time: 0.903 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 20242
-traniter = 20236
-tranpoints = 10094
-accept = 10082
-rejected = 12
-matrix size = 13
+totiter = 20262
+traniter = 20255
+tranpoints = 10088
+accept = 10077
+rejected = 11
+matrix size = 25
 fillins = 0
 solver = Normal
-Matrix Compiler1: 960 bytes object code size  0.3/0.2/[0.2]
-Matrix Compiler2: 1.32 KB object code size  0.2/0.2/[0.2]
+Matrix Compiler1: 2.31 KB object code size  1.4/0.8/[0.5]
+Matrix Compiler2: off  [0.8]/1.0/1.1
 
